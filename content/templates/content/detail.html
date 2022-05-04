@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  {{ article.title }}
+{% endblock %}
+{% block content %}
+  {{ article.title }}
+  {{ article.text }}
+
+  <img src="{% if article.image %}{{ MEDIA_URL }}{{ article.image.url }}{% endif %}">
+  {{ article.file }}
+{% endblock %}

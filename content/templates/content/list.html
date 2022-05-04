@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+  main page
+{% endblock %}
+{% block content %}
+  {% for article in articles %}
+    <p>
+      <a href="{% url 'detail' article.id %}">    <h3>{{ article.title }}</h3></a>
+    </p>
+  {% endfor %}
+{% endblock %}
